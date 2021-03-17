@@ -20,7 +20,7 @@ visit [Socker-io](https://socket.io/)
 ## Usage
 
 ```
-    npm istall
-    npm rundev
+    npm install
+    npm run dev
 
 ```
