@@ -60,13 +60,13 @@ chatForm.addEventListener('submit', (e) => {
  //Add room name to DOM
 
  function outputRoomName(room) {
-     roomName.innerText = room;
+     roomName.innerText = `* ${room}`;
  }
 
  //Add user name to DOM
 
  function outputUsers(users) {
     userList.innerHTML = `
-    ${users.map(user => `<li>${user.username}</li>`).join('')}
+    ${users.map(user => `<li><i class="far fa-user"></i>  ${user.username}</li>`).join('')}
     `
 }

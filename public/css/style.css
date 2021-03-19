@@ -1,11 +1,31 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?Poppins=Roboto&display=swap");
 
 :root {
-  --dark-color-a: #667aff;
-  --dark-color-b: #7386ff;
+  --dark-color-a: rgba(93, 52, 236, 1);
+  --dark-color-b: rgba(62, 161, 219, 1);
   --light-color: #e6e9ff;
   --success-color: #5cb85c;
   --error-color: #d9534f;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 * {
@@ -15,9 +35,15 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
-  background: var(--light-color);
+  height: 94vh;
+  /* background: var(--light-color); */
+  background-image: linear-gradient(
+    109.6deg,
+    rgba(62, 161, 219, 1) 11.2%,
+    rgba(93, 52, 236, 1) 100.2%
+  );
   margin: 20px;
 }
 
@@ -31,9 +57,18 @@ a {
 
 .btn {
   cursor: pointer;
-  padding: 5px 15px;
+  padding: 10px 15px;
   background: var(--light-color);
-  color: var(--dark-color-a);
+  color: black;
+  border: 0;
+  font-size: 17px;
+}
+
+.btn:hover {
+  cursor: pointer;
+  padding: 10px 15px;
+  background: rgba(93, 52, 236, 1);
+  color: white;
   border: 0;
   font-size: 17px;
 }
@@ -64,7 +99,7 @@ a {
 }
 
 .chat-sidebar {
-  background: var(--dark-color-b);
+  background: var(--dark-color-a);
   color: #fff;
   padding: 20px 20px 60px;
   overflow-y: scroll;
@@ -122,7 +157,7 @@ a {
 .chat-form-container input[type="text"] {
   font-size: 16px;
   padding: 5px;
-  height: 40px;
+  height: 42px;
   flex: 1;
 }
 
@@ -181,6 +216,21 @@ a {
 @media (max-width: 700px) {
   .chat-main {
     display: block;
+  }
+
+  .chat-form-container {
+    font-size: 16px;
+    padding: 5px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex: 0;
+  }
+
+  .chat-form-container #msg {
+    width: 350px;
   }
 
   .chat-sidebar {
